@@ -10,7 +10,7 @@ import 'package:nb_utils/nb_utils.dart';
 class KYSignScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passController = TextEditingController();
-  final FirebaseService _firebaseService = FirebaseService();
+  final FirebaseService _firebaseService = Get.find<FirebaseService>();
 
   final FocusNode emailFocus = FocusNode();
   final FocusNode passWordFocus = FocusNode();
@@ -68,7 +68,7 @@ class KYSignScreen extends StatelessWidget {
               16.height,
               ElevatedButton(
                 onPressed: () {
-                  Get.off(() => DACreateAccountScreen());
+                  Get.off(() => KYCreateAccountScreen());
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: primaryColor,
@@ -81,9 +81,14 @@ class KYSignScreen extends StatelessWidget {
               16.height,
               ElevatedButton(
                 onPressed: () async {
+                  Get.put(FirebaseService());
+
                   try {
                     await _firebaseService.signInWithGoogle();
-
+                    // Navigator.pushReplacement(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => KYCreateAccountScreen()));
                     Get.off(() => KYCreateAccountScreen());
                   } catch (e) {
                     Get.snackbar('Error', 'Gagal login dengan Google');

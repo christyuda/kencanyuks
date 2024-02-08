@@ -37,6 +37,12 @@ dependencies:
   get: ^4.6.6
   cached_network_image: ^3.3.1
   nb_utils: ^6.1.2
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  cloud_firestore: ^4.15.4
+  provider: ^6.1.1
+  firebase_ui_auth: ^1.13.0
+  google_sign_in: ^6.2.1
 
 dev_dependencies:
   flutter_test:

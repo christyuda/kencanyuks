@@ -4,6 +4,8 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:kencanyuks/view/screen/KYWalkThroughScreen.dart';
 
 class KYSplashScreen extends StatefulWidget {
+  const KYSplashScreen({super.key});
+
   @override
   State<KYSplashScreen> createState() => _KYSplashScreenState();
 }
@@ -11,8 +13,8 @@ class KYSplashScreen extends StatefulWidget {
 class _KYSplashScreenState extends State<KYSplashScreen> {
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 3), () {
-      Get.off(KYWalkThroughScreen());
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.off(const KYWalkThroughScreen());
     });
 
     return Scaffold(

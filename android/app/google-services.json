@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716193954786",
+    "project_id": "kencannih",
+    "storage_bucket": "kencannih.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716193954786:android:7aff59bf8729f204ccd7bb",
+        "android_client_info": {
+          "package_name": "com.example.kencanyuks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbQXUj2Zcvw_rEUFKyJ5q24AOxfGuA_10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

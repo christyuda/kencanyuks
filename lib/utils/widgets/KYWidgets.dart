@@ -36,7 +36,7 @@ Widget commonCachedNetworkImage(
             radius: radius);
       },
       placeholder: (_, s) {
-        if (!usePlaceholderIfUrlEmpty) return SizedBox();
+        if (!usePlaceholderIfUrlEmpty) return const SizedBox();
         return placeHolderWidget(
             height: height,
             width: width,
@@ -76,9 +76,9 @@ InputDecoration buildInputDecoration(String name, {Widget? prefixIcon}) {
     hintStyle: primaryTextStyle(),
     focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8.0),
-        borderSide: BorderSide(color: grey, width: 0.5)),
+        borderSide: const BorderSide(color: grey, width: 0.5)),
     enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8.0),
-        borderSide: BorderSide(color: grey, width: 0.5)),
+        borderSide: const BorderSide(color: grey, width: 0.5)),
   );
 }

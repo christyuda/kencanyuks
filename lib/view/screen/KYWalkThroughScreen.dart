@@ -6,6 +6,8 @@ import 'package:kencanyuks/view/screen/KYWelcomeScreen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class KYWalkThroughScreen extends StatefulWidget {
+  const KYWalkThroughScreen({super.key});
+
   @override
   KYWalkThroughScreenState createState() => KYWalkThroughScreenState();
 }
@@ -98,29 +100,29 @@ class KYWalkThroughScreenState extends State<KYWalkThroughScreen> {
                 AppButton(
                   shapeBorder: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   text: 'Skip',
                   color: context.cardColor,
                   textStyle: primaryTextStyle(),
                   onTap: () {
-                    Get.off(() => KYWelcomeScreen());
+                    Get.off(() => const KYWelcomeScreen());
                   },
                 ).visible(currentPage != 2),
                 16.width,
                 AppButton(
                   shapeBorder: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   color: primaryColor,
                   text: currentPage != 2 ? 'Next' : 'Create an account',
                   textStyle: primaryTextStyle(color: white),
                   onTap: () {
                     if (currentPage == 2) {
-                      Get.off(() => KYWelcomeScreen());
+                      Get.off(() => const KYWelcomeScreen());
                     } else {
                       pageController.animateToPage(
                         currentPage + 1,
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.linear,
                       );
                     }

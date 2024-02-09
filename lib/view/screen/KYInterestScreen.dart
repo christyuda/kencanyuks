@@ -15,7 +15,7 @@ class KYInterestScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: appBarWidget('apes',
+        appBar: appBarWidget('Kencan Yuk',
             titleTextStyle: boldTextStyle(size: 25), color: context.cardColor),
         body: SingleChildScrollView(
           child: Column(
@@ -49,14 +49,14 @@ class KYInterestScreen extends StatelessWidget {
                         padding: EdgeInsets.all(8),
                         child: Text(i.name.validate(),
                             style: boldTextStyle(
-                                color: i.mISCheck! ? white : primaryColor),
+                                color: i.mISCheck! ? white : black),
                             // : appStore.isDarkModeOn
                             //     ? white
                             //     : black),
                             textAlign: TextAlign.center),
                       ).onTap(() {
                         i.mISCheck = !i.mISCheck!;
-                      }, splashColor: white, highlightColor: white);
+                      }, splashColor: white, highlightColor: primaryColor);
                     }).toList(),
                   )),
               16.height,
@@ -66,6 +66,7 @@ class KYInterestScreen extends StatelessWidget {
                 onTap: () {
                   finish(context);
                   KYDashboardScreen().launch(context);
+                  // Get.to(() => KYDashboardScreen());
                 },
                 text: 'Continue',
                 textStyle: boldTextStyle(color: white),

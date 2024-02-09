@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kencanyuks/routes/screen/KYHomeScreen.dart';
+import 'package:kencanyuks/routes/screen/KYLoveScreen.dart';
 import 'package:kencanyuks/utils/widgets/KYColors.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-class KYDashboardScreen extends StatelessWidget {
+class KYDashboardScreen extends StatefulWidget {
+  @override
+  State<KYDashboardScreen> createState() => _KYDashboardScreenState();
+}
+
+class _KYDashboardScreenState extends State<KYDashboardScreen> {
   final currentIndex = 0.obs;
-  final List<Widget> tabs = [];
+  List<Widget> tabs = [KYHomeScreen(), KYLoveScreen()];
 
   @override
   Widget build(BuildContext context) {

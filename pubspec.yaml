@@ -43,6 +43,9 @@ dependencies:
   provider: ^6.1.1
   firebase_ui_auth: ^1.13.0
   google_sign_in: ^6.2.1
+  card_swiper: ^3.0.1
+  mobx: ^2.3.0+1
+  flutter_mobx: ^2.2.0+2
 
 dev_dependencies:
   flutter_test:

@@ -27,21 +27,21 @@ class KYWalkThroughScreenState extends State<KYWalkThroughScreen> {
   Future<void> init() async {
     list.add(
       WalkThroughModelClass(
-          title: 'Get coupled!',
+          title: 'Cari Pasanganmu!',
           image:
-              'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.5.jpg'),
+              'https://i.pinimg.com/564x/a1/61/0f/a1610fc35cb2987179438303bf5180d5.jpg'),
     );
     list.add(
       WalkThroughModelClass(
-          title: 'Meet new people!',
+          title: 'Bertemu Orang Baru!',
           image:
-              'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.9.jpg'),
+              'https://i.pinimg.com/564x/f7/94/f9/f794f9517bf01363fd086eafcbcd0e61.jpg'),
     );
     list.add(
       WalkThroughModelClass(
-          title: 'No more lonely days!',
+          title: 'Harimu tidak akan Kesepian lagi!',
           image:
-              'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.7.jpg'),
+              'https://i.pinimg.com/236x/de/d2/47/ded24751daee96c0677301429945834e.jpg'),
     );
   }
 

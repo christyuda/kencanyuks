@@ -46,6 +46,7 @@ dependencies:
   card_swiper: ^3.0.1
   mobx: ^2.3.0+1
   flutter_mobx: ^2.2.0+2
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:

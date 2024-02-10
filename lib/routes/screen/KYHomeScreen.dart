@@ -2,7 +2,6 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:kencanyuks/model/KYKencanModel.dart';
 import 'package:kencanyuks/utils/Data/KYGenerator.dart';
-import 'package:kencanyuks/utils/widgets/KYBottomSheet.dart';
 import 'package:kencanyuks/utils/widgets/KYWidgets.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:get/get.dart';
@@ -23,26 +22,9 @@ class KYHomeScreen extends StatelessWidget {
         center: true,
         titleTextStyle: boldTextStyle(size: 25),
         showBack: false,
-        actions: [
-          Icon(Icons.sort, color: white).paddingOnly(right: 16).onTap(
-            () {
-              showModalBottomSheet(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16),
-                      topRight: Radius.circular(16)),
-                ),
-                context: context,
-                builder: (BuildContext context) {
-                  return DiscoverBottomSheetWidget();
-                },
-              );
-            },
-          ),
-        ],
       ),
-      body: GetBuilder<DAHomeFragmentController>(
-        init: DAHomeFragmentController(),
+      body: GetBuilder<HomeController>(
+        init: HomeController(),
         builder: (controller) {
           return Swiper(
             controller: this.controller,
@@ -60,10 +42,8 @@ class KYHomeScreen extends StatelessWidget {
                       list[index].image!.validate(),
                       fit: BoxFit.cover,
                     ).cornerRadiusWithClipRRect(10).onTap(
-                      () {
-                        // DAZoomingScreen(img: list[index].image).launch(context);
-                      },
-                    ),
+                          () {},
+                        ),
                   ),
                   Container(
                     height: screenHeight * 0.7,
@@ -120,6 +100,7 @@ class KYHomeScreen extends StatelessWidget {
                               child: Icon(Icons.check, color: white, size: 30),
                             ).onTap(
                               () {
+                                controller.setSelectedKencan(list[index]);
                                 this.controller.next(animation: true);
                               },
                             ),
@@ -138,16 +119,20 @@ class KYHomeScreen extends StatelessWidget {
   }
 }
 
-class DAHomeFragmentController extends GetxController {
+class HomeController extends GetxController {
+  var selectedKencan = KencanModel().obs;
+
+  void setSelectedKencan(KencanModel kencan) {
+    selectedKencan.value = kencan;
+  }
+
   @override
   void onInit() {
     super.onInit();
-    // Initialize any variables or fetch data here
   }
 
   @override
   void onClose() {
-    // Clean up any resources when the controller is disposed
     super.onClose();
   }
 }

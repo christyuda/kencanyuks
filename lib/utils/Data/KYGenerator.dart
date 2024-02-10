@@ -27,7 +27,7 @@ List<KencanModel> getAllListData() {
       name: 'Eleanor Pena',
       subTitle: 'Student',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.9.jpg',
+          'https://i.pinimg.com/564x/10/6b/74/106b749927b504cc220d2f9599396833.jpg',
       age: 27,
       education: 'Bachelor of Arts'));
   list.add(KencanModel(
@@ -35,7 +35,7 @@ List<KencanModel> getAllListData() {
       name: 'Arlene McCoy',
       subTitle: 'Student',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.1.jpg',
+          'https://i.pinimg.com/564x/c0/12/52/c012526ba634df9fc50c44379299936b.jpg',
       age: 25,
       education: 'Software Developer'));
   list.add(KencanModel(
@@ -43,7 +43,7 @@ List<KencanModel> getAllListData() {
       name: 'Jerome Bell',
       subTitle: 'Student',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.2.jpg',
+          'https://i.pinimg.com/564x/08/5a/c6/085ac6a71c7787919aa6ba1696b25d70.jpg',
       age: 28,
       education: 'B.Sc in Physiology'));
   list.add(KencanModel(
@@ -51,7 +51,7 @@ List<KencanModel> getAllListData() {
       name: 'Wade Warren',
       subTitle: 'Student',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.3.jpg',
+          'https://i.pinimg.com/564x/61/e7/ef/61e7ef4fbd2ba919be7099dbd1ffa37b.jpg',
       age: 23,
       education: 'Instrument Mechanic'));
   list.add(KencanModel(
@@ -59,7 +59,7 @@ List<KencanModel> getAllListData() {
       name: 'Darlene',
       subTitle: 'Student',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.4.jpg',
+          'https://i.pinimg.com/564x/f1/b4/88/f1b488d632aa647c6f6c75f2ae830f42.jpg',
       age: 24,
       education: 'Stenography English'));
   list.add(KencanModel(
@@ -67,133 +67,13 @@ List<KencanModel> getAllListData() {
       name: 'Leslie Alexander',
       subTitle: 'Student',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.5.jpg',
+          'https://i.pinimg.com/564x/de/a7/33/dea73398ffd1a7c97212604d7dd613d4.jpg',
       age: 26,
       education: 'Insurance Agent'));
-  list.add(KencanModel(
-      subTitle1: 'Was great hanging out!',
-      name: 'Jacob Jones',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.6.jpg',
-      age: 21,
-      education: 'Basic Cosmetology'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Wade Warren',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.7.jpg',
-      age: 24,
-      education: 'Marketing Executive'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Cameron',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.8.jpg',
-      age: 22,
-      education: 'Architectural Assistant'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Jacob Jones',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.10.jpg',
-      age: 24,
-      education: 'Software Developer'));
-  list.add(KencanModel(
-      subTitle1: 'Was great hanging out',
-      name: 'Leslie Alexander',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.11.jpg',
-      age: 22,
-      education: 'B.Sc inin Physiology'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Darlene',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.12.jpg',
-      age: 21,
-      education: 'Instrument Mechanic'));
-  list.add(KencanModel(
-      subTitle1: 'Was great hanging out!',
-      name: 'Wade Warren',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.13.jpg',
-      age: 25,
-      education: 'Stenography English'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Jerome Bell',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.15.jpg',
-      age: 24,
-      education: 'Insurance Agent'));
-  list.add(KencanModel(
-      subTitle1: 'Was great hanging out!',
-      name: 'Wade Warren',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.16.jpg',
-      age: 23,
-      education: 'Basic Cosmetology'));
-  list.add(KencanModel(
-      subTitle1: 'Was great hanging out!',
-      name: 'Darlene',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.17.jpg',
-      age: 25,
-      education: 'Marketing Executive'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Leslie Alexander',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.18.jpg',
-      age: 26,
-      education: 'Architectural Assistant'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Jacob Jones',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.19.jpg',
-      age: 26,
-      education: 'Bachelor of Arts'));
-  list.add(KencanModel(
-      subTitle1: 'Was great hanging out!',
-      name: 'Wade Warren',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.20.jpg',
-      age: 22,
-      education: 'Insurance Agent'));
-  list.add(KencanModel(
-      subTitle1: 'Wade Warren',
-      name: 'Cameron',
-      subTitle: 'Student',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.21.jpg',
-      age: 24,
-      education: 'Basic Cosmetology'));
-  list.add(KencanModel(
-      name: 'Ayush Mehra ',
-      image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.22.jpg',
-      subTitle1: 'Was great hanging out!',
-      subTitle: 'Student',
-      age: 22,
-      education: 'Marketing Executive'));
   list.add(KencanModel(
       name: 'Barkha Singh',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.23.jpg',
+          'https://i.pinimg.com/564x/86/32/31/8632318443bbd7cfd4e5ec014aea8bef.jpg',
       subTitle1: 'Wade Warren',
       subTitle: 'Student',
       age: 26,
@@ -201,11 +81,11 @@ List<KencanModel> getAllListData() {
   list.add(KencanModel(
       name: 'Barkha Singh',
       image:
-          'https://assets.iqonic.design/old-themeforest-images/prokit/datingApp/Image.24.jpg',
+          'https://i.pinimg.com/564x/a3/1c/aa/a31caa19680f390044e4c1291ddf4a31.jpg',
       subTitle1: 'Wade Warren',
       subTitle: 'Student',
       age: 23,
-      education: 'Basic Cosmetology'));
+      education: 'Art'));
 
   return list;
 }

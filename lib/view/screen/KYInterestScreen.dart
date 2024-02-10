@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kencanyuks/main.dart';
 import 'package:kencanyuks/model/KYKencanModel.dart';
 import 'package:kencanyuks/utils/Data/KYGenerator.dart';
 import 'package:kencanyuks/utils/widgets/KYColors.dart';
@@ -16,15 +17,18 @@ class KYInterestScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: appBarWidget('Kencan Yuk',
-            titleTextStyle: boldTextStyle(size: 25), color: context.cardColor),
+            showBack: false,
+            titleTextStyle: boldTextStyle(size: 25),
+            color: context.cardColor),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               16.height,
-              Text('Create your \naccount', style: boldTextStyle(size: 30)),
+              Text('Kira Kira \nApa ya Kesukaanmu?',
+                  style: boldTextStyle(size: 28)),
               16.height,
-              Text('Select a few of your interests', style: primaryTextStyle()),
+              Text('Pilih apa yang kamu suka', style: primaryTextStyle()),
               16.height,
               Obx(() => Wrap(
                     alignment: WrapAlignment.center,
@@ -35,24 +39,28 @@ class KYInterestScreen extends StatelessWidget {
                         width: screenWidth * 0.46 - 24,
                         decoration: BoxDecoration(
                             border: Border.all(
-                                color: i.mISCheck.validate()
-                                    ? primaryColor
-                                    : grey),
+                              color: i.mISCheck!
+                                  ? primaryColor
+                                  : appStore.isDarkModeOn
+                                      ? cardLightColor
+                                      : white,
+                            ),
                             borderRadius: BorderRadius.circular(10),
-                            color: i.mISCheck! ? primaryColor : white)
-
-                        // : appStore.isDarkModeOn
-                        //     ? cardDarkColor
-                        //     : white,
-                        ,
+                            color: i.mISCheck!
+                                ? white
+                                : appStore.isDarkModeOn
+                                    ? white
+                                    : blueViolet),
                         margin: EdgeInsets.all(8),
                         padding: EdgeInsets.all(8),
                         child: Text(i.name.validate(),
                             style: boldTextStyle(
-                                color: i.mISCheck! ? white : black),
-                            // : appStore.isDarkModeOn
-                            //     ? white
-                            //     : black),
+                                color: i.mISCheck!
+                                    ? primaryColor
+                                    : appStore.isDarkModeOn
+                                        ? cardLightColor
+                                        : white),
+                            //
                             textAlign: TextAlign.center),
                       ).onTap(() {
                         i.mISCheck = !i.mISCheck!;

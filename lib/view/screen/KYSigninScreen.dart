@@ -16,6 +16,10 @@ class KYSignScreen extends StatelessWidget {
   final FocusNode passWordFocus = FocusNode();
 
   KYSignScreen({super.key});
+  Map<String, String> dummyUserData = {
+    'email': 'dummy@example.com',
+    'password': 'dummy123',
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +72,14 @@ class KYSignScreen extends StatelessWidget {
               16.height,
               ElevatedButton(
                 onPressed: () {
-                  Get.off(() => KYCreateAccountScreen());
+                  if (emailController.text == dummyUserData['email'] &&
+                      passController.text == dummyUserData['password']) {
+                    Get.snackbar('Success', 'Berhasil login');
+                    Get.off(() => KYCreateAccountScreen());
+                  } else {
+                    // Autentikasi gagal, tampilkan snackbar
+                    Get.snackbar('Error', 'Email atau password salah');
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: primaryColor,
@@ -85,10 +96,6 @@ class KYSignScreen extends StatelessWidget {
 
                   try {
                     await _firebaseService.signInWithGoogle();
-                    // Navigator.pushReplacement(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => KYCreateAccountScreen()));
                     Get.off(() => KYCreateAccountScreen());
                   } catch (e) {
                     Get.snackbar('Error', 'Gagal login dengan Google');
@@ -113,7 +120,7 @@ class KYSignScreen extends StatelessWidget {
                         style: boldTextStyle(color: Colors.black)),
                   ],
                 ),
-              ).paddingOnly(left: 16, right: 16, bottom: 25),
+              ).paddingOnly(left: 0, right: 0, bottom: 25),
             ],
           ).paddingOnly(left: 16, right: 16),
         ),

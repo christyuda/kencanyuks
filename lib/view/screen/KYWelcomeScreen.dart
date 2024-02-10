@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:kencanyuks/utils/widgets/KYColors.dart';
 import 'package:kencanyuks/view/screen/KYSigninScreen.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:kencanyuks/view/screen/KYCreateAccountScreen.dart';
 
 class KYWelcomeScreen extends StatefulWidget {
   const KYWelcomeScreen({super.key});
@@ -45,7 +46,7 @@ class _KYWelcomeScreenState extends State<KYWelcomeScreen> {
               child: Text('Belum Punya Akun?',
                   style: boldTextStyle(), textAlign: TextAlign.center),
             ).onTap(() {
-              Get.to(() => DACreateAccountScreen());
+              Get.to(() => KYCreateAccountScreen());
             },
                 highlightColor: context.cardColor,
                 splashColor: context.cardColor),
@@ -68,5 +69,3 @@ class _KYWelcomeScreenState extends State<KYWelcomeScreen> {
     );
   }
 }
-
-class DACreateAccountScreen {}

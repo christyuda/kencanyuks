@@ -7,7 +7,7 @@ class AccountController extends GetxController {
   var isExpanded = false.obs;
   var selectedIndex = 0.obs;
 
-  final List<String> genders = ['Male', 'Female'];
+  final List<String> genders = ['Laki - Laki', 'Perempuan'];
 
   void toggleExpansion() {
     isExpanded.value = !isExpanded.value;
@@ -37,7 +37,7 @@ class AccountWidget extends StatelessWidget {
                   8.width,
                   Icon(Icons.mouse_outlined, color: primaryColor),
                   12.width,
-                  Text('Gender', style: primaryTextStyle()),
+                  Text('Jenis Kelamin', style: primaryTextStyle()),
                 ],
               );
             },

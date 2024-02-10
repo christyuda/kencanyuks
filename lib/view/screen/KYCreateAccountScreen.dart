@@ -44,16 +44,19 @@ class KYCreateAccountScreenState extends State<KYCreateAccountScreen> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: appBarWidget('apes',
-            titleTextStyle: boldTextStyle(size: 25), color: context.cardColor),
+        appBar: appBarWidget('Kencan Yuk',
+            showBack: false,
+            titleTextStyle: boldTextStyle(size: 25),
+            color: context.cardColor),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               50.height,
-              Text('Create your \naccount', style: boldTextStyle(size: 30)),
+              Text('Ayo Buat \nAkunmu', style: boldTextStyle(size: 30)),
               16.height,
-              Text('Sign up and get started!', style: primaryTextStyle()),
+              Text('Daftar agar pasanganmu lebih tahu kamu ya',
+                  style: primaryTextStyle()),
               16.height,
               AppTextField(
                 controller: emailController,
@@ -62,7 +65,7 @@ class KYCreateAccountScreenState extends State<KYCreateAccountScreen> {
                 textFieldType: TextFieldType.EMAIL,
                 cursorColor: white,
                 decoration: buildInputDecoration(
-                  'Name',
+                  'Nama',
                   prefixIcon: Icon(Icons.person_outline, color: primaryColor),
                 ),
               ),
@@ -73,7 +76,7 @@ class KYCreateAccountScreenState extends State<KYCreateAccountScreen> {
                 textFieldType: TextFieldType.OTHER,
                 cursorColor: white,
                 decoration: buildInputDecoration(
-                  'Date of Birth',
+                  'Tanggal Lahir',
                   prefixIcon: Icon(Icons.date_range, color: primaryColor),
                 ),
                 onTap: () => pickDate(),
@@ -84,7 +87,7 @@ class KYCreateAccountScreenState extends State<KYCreateAccountScreen> {
                 textFieldType: TextFieldType.OTHER,
                 cursorColor: white,
                 decoration: buildInputDecoration(
-                  'City',
+                  'Kota',
                   prefixIcon:
                       Icon(Icons.location_on_outlined, color: primaryColor),
                 ),
@@ -93,7 +96,7 @@ class KYCreateAccountScreenState extends State<KYCreateAccountScreen> {
               AccountWidget(),
               16.height,
               AppButton(
-                text: 'Continue',
+                text: 'Lanjutkan',
                 textStyle: boldTextStyle(color: white),
                 width: screenWidth,
                 color: primaryColor,
